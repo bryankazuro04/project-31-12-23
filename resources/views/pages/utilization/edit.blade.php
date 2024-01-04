@@ -1,6 +1,10 @@
 <x-app-layout>
     <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl rounded-lg">
-        <h1 class="font-bold text-3xl mt-4 mb-8 mx-6">Edit Utilization</h1>
+        <div class="flex justify-between items-center mt-4 mb-8 mx-6">
+            <h1 class="font-bold text-3xl">Edit Utilization</h1>
+    
+            <a href="{{ route('utilization.index') }}" class="hover:text-white sm:hidden"><i class="fa-solid fa-arrow-left"></i> Back</a>
+        </div>
 
         <form action="{{ route('utilization.update', [$utilization]) }}" method="POST" class="mx-6 my-4">
             @csrf
