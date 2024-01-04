@@ -35,9 +35,9 @@
     content: attr(title);
     display: block;
     position: absolute;
-    background: #fff;
+    background: rgb(203, 213, 225);
     border: 1px solid #000;
     border-radius: 0.25rem;
     padding: 0.25rem 0.75rem;
-    color: red;
+    color: rgb(100, 116, 139);
 }
