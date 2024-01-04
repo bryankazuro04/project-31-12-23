@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
+    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl rounded-lg">
         <div class="flex justify-between mt-4 mb-8 mx-6">
             <h1 class="font-bold text-3xl">Productivity</h1>
 

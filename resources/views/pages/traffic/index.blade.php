@@ -5,12 +5,12 @@
         </h2>
     </x-slot>
 
-    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-        <div class="flex justify-between mt-4 mb-8 mx-6">
+    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl rounded-lg">
+        <div class="flex justify-between mt-4 mb-8 mx-6 flex-col xs:flex-row">
             <h1 class="font-bold text-3xl">Traffic</h1>
 
             <a href="{{ route('traffic.create') }}"
-                class="py-2 px-4 rounded-lg bg-[#88AB8E] dark:bg-blue-700 text-slate-800 hover:bg-[#AFC8AD] dark:hover:bg-blue-800">Create
+                class="py-2 px-4 rounded-lg bg-[#88AB8E] dark:bg-blue-700 text-slate-800 hover:bg-[#AFC8AD] dark:hover:bg-blue-800 w-fit">Create
                 Traffic</a>
         </div>
 
@@ -52,7 +52,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="6" class="text-center">Tidak ada data</td>
+                            <td colspan="6" class="text-center bg-slate-300">Tidak ada data</td>
                         </tr>
                     @endforelse
                 </tbody>

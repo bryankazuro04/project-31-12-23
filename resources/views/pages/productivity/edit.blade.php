@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
+    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl rounded-lg">
         <h1 class="font-bold text-3xl mt-4 mb-8 mx-6">Edit Productivity</h1>
 
         <form action="{{ route('productivity.update', [$productivity]) }}" method="POST" class="mx-6 my-4">
