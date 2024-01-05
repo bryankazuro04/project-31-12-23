@@ -1,11 +1,6 @@
 <x-guest-layout>
     <x-authentication-card>
-        
-        {{-- <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot> --}}
-
-        {{-- <x-validation-errors class="mb-4 absolute top-4 right-0 md:right-10 border border-slate-500 rounded-md py-3 px-6 mx-3" /> --}}
+        <x-validation-errors class="mb-4 absolute top-4 right-0 md:right-10 border border-slate-500 rounded-md py-3 px-6 mx-3" />
 
         @if (session('status'))
             <div class="mb-4 font-medium text-sm text-green-600 dark:text-green-400">
