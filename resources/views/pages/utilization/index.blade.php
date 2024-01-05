@@ -5,7 +5,8 @@
         </h2>
     </x-slot>
 
-    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl rounded-lg">
+    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl rounded-lg" x-data="{ selectedMonth: '' }">
+        {{-- Title --}}
         <div class="flex justify-between mt-4 mb-8 mx-6">
             <h1 class="font-bold text-3xl">Utilization</h1>
 
@@ -14,6 +15,27 @@
                 Utilization</a>
         </div>
 
+        {{-- Filter --}}
+        <div class="my-4 mx-6">
+            <label for="filteredMonth">Filter by Month:</label>
+            <select name="" id="filteredMonth" x-model="selectedMonth" class="rounded-lg dark:bg-slate-800 dark:text-slate-400 ml-2">
+                <option value="1">Januari</option>
+                <option value="2">Februari</option>
+                <option value="3">Maret</option>
+                <option value="4">April</option>
+                <option value="5">Mei</option>
+                <option value="6">Juni</option>
+                <option value="7">Juli</option>
+                <option value="8">Agustus</option>
+                <option value="9">September</option>
+                <option value="10">Oktober</option>
+                <option value="11">November</option>
+                <option value="12">Desember</option>
+                <option value="" selected disabled>{{ "-" }}</option>
+            </select>
+        </div>
+        
+        {{-- Data table --}}
         <div class="overflow-x-auto my-4 mx-6 rounded-md">
 
             <table class="table table-xs text-center even:bg-slate-500">
@@ -23,6 +45,7 @@
                         <th colspan="2" class="border-x border-slate-600">Dermaga</th>
                         <th colspan="2" class="border-x border-slate-600">Lapangan Penumpukan</th>
                         <th colspan="2" class="border-x border-slate-600">Gudang Penumpukan</th>
+                        <th rowspan="2">Tanggal</th>
                         <th rowspan="2">Action</th>
                     </tr>
                     <tr>
@@ -36,7 +59,7 @@
                 </thead>
                 <tbody class="capitalize">
                     @forelse ($utilization as $utility)
-                        <tr class="border-slate-600 hover">
+                        <tr class="border-slate-600 hover" x-show="(selectedMonth === '' || parseInt(selectedMonth) === {{ $utility->created_at->format('m') }})">
                             <th>{{ $utilization->firstItem() + $loop->index }}</th>
                             <td>{{ $utility->bor }}</td>
                             <td>{{ $utility->btp }}</td>
@@ -44,6 +67,7 @@
                             <td>{{ $utility->ytp }}</td>
                             <td>{{ $utility->sor }}</td>
                             <td>{{ $utility->stp }}</td>
+                            <td>{{ $utility->created_at->format('d-m-Y') }}</td>
                             <td class="flex justify-center gap-2">
                                 <a href="{{ route('utilization.edit', [$utility]) }}" class="hover:text-yellow-600">
                                     <i class="fa-regular fa-pen-to-square w-6 h-6"></i>
