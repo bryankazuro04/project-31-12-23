@@ -11,10 +11,17 @@
             @method('PUT')
 
             <div class="mb-4">
-                <x-label for="waiting_time" :value="__('Waiting Time')" />
-                <x-input id="waiting_time" name="waiting_time" type="text" class="block w-full mt-3"
-                    wire:model.defer="waiting_time" value="{{ $service_time->waiting_time }}" />
-                <x-input-error for="waiting_time" />
+                <x-label for="waiting_time_pilot" :value="__('Waiting Time Pilot')" />
+                <x-input id="waiting_time_pilot" name="waiting_time_pilot" type="text" class="block w-full mt-3"
+                    wire:model.defer="waiting_time_pilot" value="{{ $service_time->waiting_time_pilot }}" />
+                <x-input-error for="waiting_time_pilot" />
+            </div>
+
+            <div class="mb-4">
+                <x-label for="waiting_time_dermaga" :value="__('Waiting Time Dermaga')" />
+                <x-input id="waiting_time_dermaga" name="waiting_time_dermaga" type="text" class="block w-full mt-3"
+                    wire:model.defer="waiting_time_dermaga" value="{{ $service_time->waiting_time_dermaga }}" />
+                <x-input-error for="waiting_time_dermaga" />
             </div>
 
             <div class="mb-4">
