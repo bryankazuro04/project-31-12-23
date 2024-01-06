@@ -26,7 +26,8 @@ class StoreTrafficRequest extends FormRequest
             'kunjungan_kapal' => 'required|numeric',
             'jumlah_bongkar_muat' => 'required|numeric',
             'grt' => 'required|numeric',
-            'loa' => 'required|decimal:2|numeric'
+            'loa' => 'required|decimal:2|numeric',
+            'created_at' => 'date'
         ];
     }
 
