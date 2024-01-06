@@ -50,8 +50,8 @@
                         <th rowspan="2">Action</th>
                     </tr>
                     <tr>
-                        <th class="border-x border-slate-600">Truck Lossing</th>
-                        <th class="border-x border-slate-600">Pipa Lossing</th>
+                        <th>Truck Lossing</th>
+                        <th>Pipa Lossing</th>
                     </tr>
                 </thead>
                 <tbody class="capitalize">
@@ -82,7 +82,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="7" class="text-center">Tidak ada data</td>
+                            <td colspan="8" class="text-center">Tidak ada data</td>
                         </tr>
                     @endforelse
                 </tbody>

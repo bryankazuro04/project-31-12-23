@@ -41,20 +41,25 @@
             <table class="table table-xs text-center even:bg-slate-500">
                 <thead class="bg-[#EEE7DA] dark:bg-base-300 text-slate-700 dark:text-slate-400 uppercase">
                     <tr class="border-slate-600 ">
-                        <th>No.</th>
-                        <th>Waiting Time</th>
-                        <th>Waiting Time Gross</th>
-                        <th>Postpone Time</th>
-                        <th>Approach Time</th>
-                        <th>Tanggal</th>
-                        <th>Action</th>
+                        <th rowspan="2">No.</th>
+                        <th colspan="2">Waiting Time</th>
+                        <th rowspan="2">Waiting Time Gross</th>
+                        <th rowspan="2">Postpone Time</th>
+                        <th rowspan="2">Approach Time</th>
+                        <th rowspan="2">Tanggal</th>
+                        <th rowspan="2">Action</th>
+                    </tr>
+                    <tr>
+                        <th>Pilot</th>
+                        <th>Dermaga</th>
                     </tr>
                 </thead>
                 <tbody class="capitalize">
                     @forelse ($service_times as $service_time)
                         <tr class="border-slate-600 hover" x-show="(selectedMonth === '' || parseInt(selectedMonth) === {{ $service_time->created_at->format('m') }})">
                             <th>{{ $service_times->firstItem() + $loop->index }}</th>
-                            <td>{{ $service_time->waiting_time }}</td>
+                            <td>{{ $service_time->waiting_time_pilot }}</td>
+                            <td>{{ $service_time->waiting_time_dermaga }}</td>
                             <td>{{ $service_time->wt_gross }}</td>
                             <td>{{ $service_time->postpone_time }}</td>
                             <td>{{ $service_time->approach_time }}</td>
@@ -77,7 +82,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="6" class="text-center">Tidak ada data</td>
+                            <td colspan="7" class="text-center">Tidak ada data</td>
                         </tr>
                     @endforelse
                 </tbody>

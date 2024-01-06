@@ -42,19 +42,19 @@
                 <thead class="bg-[#EEE7DA] dark:bg-base-300 text-slate-700 dark:text-slate-400 uppercase">
                     <tr class="border-slate-600 ">
                         <th rowspan="2">No.</th>
-                        <th colspan="2" class="border-x border-slate-600">Dermaga</th>
-                        <th colspan="2" class="border-x border-slate-600">Lapangan Penumpukan</th>
-                        <th colspan="2" class="border-x border-slate-600">Gudang Penumpukan</th>
+                        <th colspan="2">Dermaga</th>
+                        <th colspan="2">Lapangan Penumpukan</th>
+                        <th colspan="2">Gudang Penumpukan</th>
                         <th rowspan="2">Tanggal</th>
                         <th rowspan="2">Action</th>
                     </tr>
                     <tr>
-                        <th class="border-x border-slate-600"><abbr title="Berth Occupancy Ratio">BOR</abbr></th>
-                        <th class="border-x border-slate-600"><abbr title="Berth Through Put">BTP</abbr></th>
-                        <th class="border-x border-slate-600"><abbr title="Yard Occupancy Ratio">YOR</abbr></th>
-                        <th class="border-x border-slate-600"><abbr title="Yard Through Put">YTP</abbr></th>
-                        <th class="border-x border-slate-600"><abbr title="Shed Occupancy Ratio">SOR</abbr></th>
-                        <th class="border-x border-slate-600"><abbr title="Shed Through Put">STP</abbr></th>
+                        <th><abbr title="Berth Occupancy Ratio">BOR</abbr></th>
+                        <th><abbr title="Berth Through Put">BTP</abbr></th>
+                        <th><abbr title="Yard Occupancy Ratio">YOR</abbr></th>
+                        <th><abbr title="Yard Through Put">YTP</abbr></th>
+                        <th><abbr title="Shed Occupancy Ratio">SOR</abbr></th>
+                        <th><abbr title="Shed Through Put">STP</abbr></th>
                     </tr>
                 </thead>
                 <tbody class="capitalize">
@@ -85,7 +85,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="8" class="text-center">Tidak ada data</td>
+                            <td colspan="9" class="text-center">Tidak ada data</td>
                         </tr>
                     @endforelse
                 </tbody>
