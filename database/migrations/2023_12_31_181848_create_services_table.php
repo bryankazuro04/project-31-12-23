@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->string('waiting_time');
+            $table->string('waiting_time_pilot');
+            $table->string('waiting_time_dermaga');
             $table->string('wt_gross');
             $table->string('postpone_time');
             $table->string('approach_time');
