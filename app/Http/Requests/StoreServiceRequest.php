@@ -23,11 +23,11 @@ class StoreServiceRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'waiting_time_pilot' => 'required',
-            'waiting_time_dermaga' => 'required',
-            'wt_gross' => 'required',
-            'postpone_time' => 'required',
-            'approach_time' => 'required'
+            'waiting_time_pilot' => 'required|numeric',
+            'waiting_time_dermaga' => 'required|numeric',
+            'wt_gross' => 'required|numeric',
+            'postpone_time' => 'required|numeric',
+            'approach_time' => 'required|numeric'
         ];
     }
 

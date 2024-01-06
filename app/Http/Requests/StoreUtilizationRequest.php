@@ -23,12 +23,12 @@ class StoreUtilizationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'bor' => 'required',
-            'btp' => 'required',
-            'yor' => 'required',
-            'ytp' => 'required',
-            'sor' => 'required',
-            'stp' => 'required'
+            'bor' => 'required|numeric',
+            'btp' => 'required|numeric',
+            'yor' => 'required|numeric',
+            'ytp' => 'required|numeric',
+            'sor' => 'required|numeric',
+            'stp' => 'required|numeric'
         ];
     }
 

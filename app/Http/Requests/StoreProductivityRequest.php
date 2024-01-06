@@ -23,11 +23,11 @@ class StoreProductivityRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'general_cargo' => 'required',
-            'bag_cargo' => "required",
-            'unitized' => 'required',
-            'truck_lossing' => 'required',
-            'pipa_lossing' => 'required'
+            'general_cargo' => 'required|numeric',
+            'bag_cargo' => "required|numeric",
+            'unitized' => 'required|numeric',
+            'truck_lossing' => 'required|numeric',
+            'pipa_lossing' => 'required|numeric'
         ];
     }
 
