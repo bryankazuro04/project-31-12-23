@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductivityController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TrafficController;
@@ -20,9 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::redirect('/', '/login');
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');    
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');    
 
     Route::prefix('dashboard')->group(function () {
         Route::resource('traffic', TrafficController::class);
