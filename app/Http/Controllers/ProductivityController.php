@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Productivity;
 use App\Http\Requests\StoreProductivityRequest;
 use App\Http\Requests\UpdateProductivityRequest;
+use App\Models\Operation;
 
 class ProductivityController extends Controller
 {
@@ -30,7 +31,9 @@ class ProductivityController extends Controller
      */
     public function store(StoreProductivityRequest $request)
     {
-        Productivity::create($request->validated());
+        $productivity = Productivity::create($request->validated());
+        $operation = new Operation(['productivities_id' => $productivity->id]);
+        $productivity->operations()->save($operation);
 
         return redirect()
             ->route('productivity.index')

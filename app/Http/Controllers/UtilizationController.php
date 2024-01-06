@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Utilization;
 use App\Http\Requests\StoreUtilizationRequest;
 use App\Http\Requests\UpdateUtilizationRequest;
+use App\Models\Operation;
 
 class UtilizationController extends Controller
 {
@@ -30,7 +31,9 @@ class UtilizationController extends Controller
      */
     public function store(StoreUtilizationRequest $request)
     {
-        Utilization::create($request->validated());
+        $utilization = Utilization::create($request->validated());
+        $operation = new Operation(['utilizations_id' => $utilization->id]);
+        $utilization->operations()->save($operation);
 
         return redirect()
             ->route('utilization.index')

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Service;
 use App\Http\Requests\StoreServiceRequest;
 use App\Http\Requests\UpdateServiceRequest;
+use App\Models\Operation;
 
 class ServiceController extends Controller
 {
@@ -30,7 +31,9 @@ class ServiceController extends Controller
      */
     public function store(StoreServiceRequest $request)
     {
-        Service::create($request->validated());
+        $services = Service::create($request->validated());
+        $operation = new Operation(['services_id' => $services->id]);
+        $services->operations()->save($operation);
 
         return redirect()
             ->route('service-time.index')

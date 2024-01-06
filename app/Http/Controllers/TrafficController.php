@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Traffic;
 use App\Http\Requests\StoreTrafficRequest;
 use App\Http\Requests\UpdateTrafficRequest;
+use App\Models\Operation;
 
 class TrafficController extends Controller
 {
@@ -30,7 +31,9 @@ class TrafficController extends Controller
      */
     public function store(StoreTrafficRequest $request)
     {
-        Traffic::create($request->validated());
+        $traffic = Traffic::create($request->validated());
+        $operation = new Operation(['traffic_id' => $traffic->id]);
+        $traffic->operations()->save($operation);
         
         return redirect()
             ->route('traffic.index')
