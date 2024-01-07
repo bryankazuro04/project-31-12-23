@@ -52,6 +52,14 @@
                 <x-input-error for="stp" />
             </div>
 
+            
+            <div class="mb-4">
+                <x-label for="created_at" :value="__('Tanggal')" />
+                <x-input id="created_at" name="created_at" type="date" class="block w-full mt-3" wire:model.defer="created_at"
+                    placeholder="" />
+                <x-input-error for="created_at" />
+            </div>
+
             <x-button>{{ __('Submit') }}</x-button>
         </form>
     </div>
