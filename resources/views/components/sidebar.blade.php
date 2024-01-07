@@ -33,7 +33,7 @@
                 :class="{ 'absolute left-full ml-3 px-3 py-1 rounded-md bg-white border': !sidebarFull }">{{ __('Productivity') }}</span>
         </x-side-link>
 
-        <div class="mt-auto hover:bg-slate-200 hover:text-gray-800 ml-auto rounded-full p-2 grid place-items-center cursor-pointer w-10 h-10"
+        <div class="mt-auto hover:bg-slate-200 hover:text-gray-800 ml-auto rounded-full p-2 grid place-items-center cursor-pointer w-10 h-10" tabindex="0"
             @click="sidebarFull = !sidebarFull; localStorage.setItem('sidebarFull', sidebarFull)">
             <i class="fa-solid " :class="{ 'fa-chevron-left': sidebarFull, 'fa-bars': !sidebarFull }"></i>
         </div>
