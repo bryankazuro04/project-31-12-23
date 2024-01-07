@@ -23,11 +23,12 @@ class UpdateServiceRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'waiting_time_pilot' => 'required|numeric|decimal:2',
-            'waiting_time_dermaga' => 'required|numeric|decimal:2',
-            'wt_gross' => 'required|numeric|decimal:2',
-            'postpone_time' => 'required|numeric|decimal:2',
-            'approach_time' => 'required|numeric|decimal:2'
+            'waiting_time_pilot' => 'nullable|numeric|decimal:2',
+            'waiting_time_dermaga' => 'nullable|numeric|decimal:2',
+            'wt_gross' => 'nullable|numeric|decimal:2',
+            'postpone_time' => 'nullable|numeric|decimal:2',
+            'approach_time' => 'nullable|numeric|decimal:2',
+            'created_at' => 'date'
         ];
     }
 

@@ -23,10 +23,10 @@ class StoreTrafficRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'kunjungan_kapal' => 'required|numeric',
-            'jumlah_bongkar_muat' => 'required|numeric',
-            'grt' => 'required|numeric',
-            'loa' => 'required|decimal:2|numeric',
+            'kunjungan_kapal' => 'nullable|numeric',
+            'jumlah_bongkar_muat' => 'nullable|numeric',
+            'grt' => 'nullable|numeric',
+            'loa' => 'nullable|decimal:2|numeric',
             'created_at' => 'date'
         ];
     }

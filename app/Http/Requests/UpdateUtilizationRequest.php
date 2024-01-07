@@ -23,12 +23,13 @@ class UpdateUtilizationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'bor' => 'required|numeric',
-            'btp' => 'required|numeric',
-            'yor' => 'required|numeric',
-            'ytp' => 'required|numeric',
-            'sor' => 'required|numeric',
-            'stp' => 'required|numeric'
+            'bor' => 'nullable|numeric|decimal:2',
+            'btp' => 'nullable|numeric|decimal:2',
+            'yor' => 'nullable|numeric|decimal:2',
+            'ytp' => 'nullable|numeric|decimal:2',
+            'sor' => 'nullable|numeric|decimal:2',
+            'stp' => 'nullable|numeric|decimal:2',
+            'created_at' => 'date'
         ];
     }
 

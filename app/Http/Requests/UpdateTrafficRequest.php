@@ -23,10 +23,10 @@ class UpdateTrafficRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'kunjungan_kapal' => 'required|numeric',
-            'jumlah_bongkar_muat' => 'required|numeric',
-            'grt' => 'required|numeric',
-            'loa' => 'required|numeric|decimal:2',
+            'kunjungan_kapal' => 'nullable|numeric',
+            'jumlah_bongkar_muat' => 'nullable|numeric',
+            'grt' => 'nullable|numeric',
+            'loa' => 'nullable|numeric|decimal:2',
             'created_at' => 'date'
         ];
     }
