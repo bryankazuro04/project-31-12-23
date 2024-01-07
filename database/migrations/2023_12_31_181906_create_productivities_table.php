@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('productivities', function (Blueprint $table) {
             $table->id();
-            $table->string('general_cargo');
-            $table->string('bag_cargo');
-            $table->string('unitized');
-            $table->string('truck_lossing');
-            $table->string('pipa_lossing');
+            $table->string('general_cargo')->nullable();
+            $table->string('bag_cargo')->nullable();
+            $table->string('unitized')->nullable();
+            $table->string('truck_lossing')->nullable();
+            $table->string('pipa_lossing')->nullable();
             $table->timestamps();
         });
     }

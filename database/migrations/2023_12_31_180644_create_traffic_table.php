@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('traffic', function (Blueprint $table) {
             $table->id();
-            $table->string('kunjungan_kapal');
-            $table->string('jumlah_bongkar_muat');
-            $table->string('grt');
-            $table->string('loa');
+            $table->string('kunjungan_kapal')->nullable();
+            $table->string('jumlah_bongkar_muat')->nullable();
+            $table->string('grt')->nullable();
+            $table->string('loa')->nullable();
             $table->timestamps();
         });
     }

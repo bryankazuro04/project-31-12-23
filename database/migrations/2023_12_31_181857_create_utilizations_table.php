@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('utilizations', function (Blueprint $table) {
             $table->id();
-            $table->string('bor');
-            $table->string('btp');
-            $table->string('yor');
-            $table->string('ytp');
-            $table->string('sor');
-            $table->string('stp');
+            $table->string('bor')->nullable();
+            $table->string('btp')->nullable();
+            $table->string('yor')->nullable();
+            $table->string('ytp')->nullable();
+            $table->string('sor')->nullable();
+            $table->string('stp')->nullable();
             $table->timestamps();
         });
     }
