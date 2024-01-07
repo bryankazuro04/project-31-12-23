@@ -22,20 +22,22 @@ Route::get('/traffic-data', function() {
     $trafficData = Traffic::all();
     return response()->json($trafficData);
 });
+
+Route::get('/service-data', function() {
+    $serviceData = Service::all();
+    return response()->json($serviceData);
+});
+
+Route::get('/utilization-data', function() {
+    $utilizationData = Utilization::all();
+    return response()->json($utilizationData);
+});
+
+Route::get('/productivity-data', function() {
+    $productivityData = Productivity::all();
+    return response()->json($productivityData);
+});
+
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function() {
-
-    Route::get('/service-data', function() {
-        $serviceData = Service::all();
-        return response()->json($serviceData);
-    });
-
-    Route::get('/utilization-data', function() {
-        $utilizationData = Utilization::all();
-        return response()->json($utilizationData);
-    });
-
-    Route::get('/productivity-data', function() {
-        $productivityData = Productivity::all();
-        return response()->json($productivityData);
-    });
+    //
 });
