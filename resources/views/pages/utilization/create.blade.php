@@ -11,42 +11,42 @@
 
             <div class="mb-4">
                 <x-label for="bor" :value="__('Berth Occupancy Ratio')" />
-                <x-input id="bor" name="bor" type="number" step="0.01" class="block w-full mt-3" wire:model.defer="bor" />
+                <x-input id="bor" name="bor" type="number" step="0.01" class="block w-full mt-3" wire:model.defer="bor" placeholder="0,00" />
                 <x-input-error for="bor" />
             </div>
 
             <div class="mb-4">
                 <x-label for="btp" :value="__('Berth Through Put')" />
                 <x-input id="btp" name="btp" type="number" step="0.01" class="block w-full mt-3"
-                    wire:model.defer="btp" />
+                    wire:model.defer="btp" placeholder="0,00" />
                 <x-input-error for="btp" />
             </div>
 
             <div class="mb-4">
                 <x-label for="yor" :value="__('Yard Occupancy Ratio')" />
                 <x-input id="yor" name="yor" type="number" step="0.01" class="block w-full mt-3"
-                    wire:model.defer="yor" />
+                    wire:model.defer="yor" placeholder="0,00" />
                 <x-input-error for="yor" />
             </div>
 
             <div class="mb-4">
                 <x-label for="ytp" :value="__('Yard Through Put')" />
                 <x-input id="ytp" name="ytp" type="number" step="0.01" class="block w-full mt-3"
-                    wire:model.defer="ytp" />
+                    wire:model.defer="ytp" placeholder="0,00" />
                 <x-input-error for="ytp" />
             </div>
 
             <div class="mb-4">
                 <x-label for="sor" :value="__('Shed Occupancy Ratio')" />
                 <x-input id="sor" name="sor" type="number" step="0.01" class="block w-full mt-3"
-                    wire:model.defer="sor" />
+                    wire:model.defer="sor" placeholder="0,00" />
                 <x-input-error for="sor" />
             </div>
 
             <div class="mb-4">
                 <x-label for="stp" :value="__('Shed Through Put')" />
                 <x-input id="stp" name="stp" type="number" step="0.01" class="block w-full mt-3"
-                    wire:model.defer="stp" />
+                    wire:model.defer="stp" placeholder="0,00" />
                 <x-input-error for="stp" />
             </div>
             

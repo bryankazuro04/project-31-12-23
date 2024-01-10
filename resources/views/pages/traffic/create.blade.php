@@ -12,28 +12,28 @@
             <div class="mb-4">
                 <x-label for="kunjungan_kapal" :value="__('Kunjungan Kapal')" />
                 <x-input id="kunjungan_kapal" name="kunjungan_kapal" type="number" class="block w-full mt-3"
-                    wire:model.defer="kunjungan_kapal" placeholder="" />
+                    wire:model.defer="kunjungan_kapal" placeholder="00" />
                 <x-input-error for="kunjungan_kapal" />
             </div>
 
             <div class="mb-4">
                 <x-label for="jumlah_bongkar_muat" :value="__('Jumlah Bongkar Muat')" />
                 <x-input id="jumlah_bongkar_muat" name="jumlah_bongkar_muat" type="number" class="block w-full mt-3"
-                    wire:model.defer="jumlah_bongkar_muat" placeholder="" />
+                    wire:model.defer="jumlah_bongkar_muat" placeholder="00" />
                 <x-input-error for="jumlah_bongkar_muat" />
             </div>
 
             <div class="mb-4">
                 <x-label for="grt" :value="__('GRT')" />
                 <x-input id="grt" name="grt" type="number" class="block w-full mt-3" wire:model.defer="grt"
-                    placeholder="" />
+                    placeholder="00" />
                 <x-input-error for="grt" />
             </div>
 
             <div class="mb-4">
                 <x-label for="loa" :value="__('Rata-rata LOA')" />
                 <x-input id="loa" name="loa" type="number" step="0.01" class="block w-full mt-3" wire:model.defer="loa"
-                    placeholder="" />
+                    placeholder="0,00" />
                 <x-input-error for="loa" />
             </div>
 
