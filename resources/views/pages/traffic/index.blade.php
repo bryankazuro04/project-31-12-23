@@ -52,13 +52,13 @@
                 </thead>
                 <tbody class="capitalize">
                     @forelse ($traffics as $traffic)
-                        <tr class="border-slate-600 hover" x-show="(selectedMonth === '' || parseInt(selectedMonth) === {{ $traffic->created_at->format('m') }})">
+                        <tr class="border-slate-600 hover" x-show="(selectedMonth === '' || parseInt(selectedMonth) === {{ Carbon\Carbon::parse($traffic->tanggal)->format('m') }})">
                             <th>{{ $traffics->firstItem() + $loop->index }}</th>
                             <td>{{ $traffic->kunjungan_kapal }}</td>
                             <td>{{ $traffic->jumlah_bongkar_muat }}</td>
                             <td>{{ $traffic->grt }}</td>
                             <td>{{ $traffic->loa }}</td>
-                            <td>{{ $traffic->created_at->format('d-m-Y') }}</td>
+                            <td>{{ Carbon\Carbon::parse($traffic->tanggal)->format('d-m-Y') }}</td>
                             <td class="flex justify-center gap-2">
                                 <a href="{{ route('traffic.edit', [$traffic]) }}" class="hover:text-yellow-600">
                                     <i class="fa-regular fa-pen-to-square w-6 h-6"></i>

@@ -45,10 +45,10 @@
             </div>
             
             <div class="mb-4">
-                <x-label for="created_at" :value="__('Tanggal')" />
-                <x-input id="created_at" name="created_at" type="date" class="block w-full mt-3" wire:model.defer="created_at"
+                <x-label for="tanggal" :value="__('Tanggal')" />
+                <x-input id="tanggal" name="tanggal" type="date" class="block w-full mt-3" wire:model.defer="tanggal"
                     placeholder="" />
-                <x-input-error for="created_at" />
+                <x-input-error for="tanggal" />
             </div>
 
             <x-button>{{ __('Submit') }}</x-button>

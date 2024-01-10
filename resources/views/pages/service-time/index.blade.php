@@ -56,14 +56,14 @@
                 </thead>
                 <tbody class="capitalize">
                     @forelse ($service_times as $service_time)
-                        <tr class="border-slate-600 hover" x-show="(selectedMonth === '' || parseInt(selectedMonth) === {{ $service_time->created_at->format('m') }})">
+                        <tr class="border-slate-600 hover" x-show="(selectedMonth === '' || parseInt(selectedMonth) === {{ Carbon\Carbon::parse($service_time->tanggal)->format('m') }})">
                             <th>{{ $service_times->firstItem() + $loop->index }}</th>
                             <td>{{ $service_time->waiting_time_pilot }}</td>
                             <td>{{ $service_time->waiting_time_dermaga }}</td>
                             <td>{{ $service_time->wt_gross }}</td>
                             <td>{{ $service_time->postpone_time }}</td>
                             <td>{{ $service_time->approach_time }}</td>
-                            <td>{{ $service_time->created_at->format('d-m-Y') }}</td>
+                            <td>{{ Carbon\Carbon::parse($service_time->tanggal)->format('d-m-Y') }}</td>
                             <td class="flex justify-center gap-2">
                                 <a href="{{ route('service-time.edit', [$service_time]) }}"
                                     class="hover:text-yellow-600">

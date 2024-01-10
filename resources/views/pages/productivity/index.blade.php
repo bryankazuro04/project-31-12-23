@@ -56,14 +56,14 @@
                 </thead>
                 <tbody class="capitalize">
                     @forelse ($productivities as $productivity)
-                        <tr class="border-slate-600 hover" x-show="(selectedMonth === '' || parseInt(selectedMonth) === {{ $productivity->created_at->format('m') }})">
+                        <tr class="border-slate-600 hover" x-show="(selectedMonth === '' || parseInt(selectedMonth) === {{ Carbon\Carbon::parse($productivity->tanggal)->format('m') }})">
                             <th>{{ $productivities->firstItem() + $loop->index }}</th>
                             <td>{{ $productivity->general_cargo }}</td>
                             <td>{{ $productivity->bag_cargo }}</td>
                             <td>{{ $productivity->unitized }}</td>
                             <td>{{ $productivity->truck_lossing }}</td>
                             <td>{{ $productivity->pipa_lossing }}</td>
-                            <td>{{ $productivity->created_at->format('d-m-Y') }}</td>
+                            <td>{{ Carbon\Carbon::parse($productivity->tanggal)->format('d-m-Y') }}</td>
                             <td class="flex justify-center gap-2">
                                 <a href="{{ route('productivity.edit', [$productivity]) }}"
                                     class="hover:text-yellow-600">

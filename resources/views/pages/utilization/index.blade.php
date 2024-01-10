@@ -59,7 +59,7 @@
                 </thead>
                 <tbody class="capitalize">
                     @forelse ($utilization as $utility)
-                        <tr class="border-slate-600 hover" x-show="(selectedMonth === '' || parseInt(selectedMonth) === {{ $utility->created_at->format('m') }})">
+                        <tr class="border-slate-600 hover" x-show="(selectedMonth === '' || parseInt(selectedMonth) === {{ Carbon\Carbon::parse($utility->tanggal)->format('m') }})">
                             <th>{{ $utilization->firstItem() + $loop->index }}</th>
                             <td>{{ $utility->bor }}</td>
                             <td>{{ $utility->btp }}</td>
@@ -67,7 +67,7 @@
                             <td>{{ $utility->ytp }}</td>
                             <td>{{ $utility->sor }}</td>
                             <td>{{ $utility->stp }}</td>
-                            <td>{{ $utility->created_at->format('d-m-Y') }}</td>
+                            <td>{{ Carbon\Carbon::parse($utility->tanggal)->format('d-m-Y') }}</td>
                             <td class="flex justify-center gap-2">
                                 <a href="{{ route('utilization.edit', [$utility]) }}" class="hover:text-yellow-600">
                                     <i class="fa-regular fa-pen-to-square w-6 h-6"></i>
