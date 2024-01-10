@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('ytp')->nullable();
             $table->string('sor')->nullable();
             $table->string('stp')->nullable();
+            $table->timestamp('tanggal');
             $table->timestamps();
         });
     }

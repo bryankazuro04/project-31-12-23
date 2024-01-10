@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('jumlah_bongkar_muat')->nullable();
             $table->string('grt')->nullable();
             $table->string('loa')->nullable();
+            $table->dateTime('tanggal');
             $table->timestamps();
         });
     }

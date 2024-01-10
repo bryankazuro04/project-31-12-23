@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('unitized')->nullable();
             $table->string('truck_lossing')->nullable();
             $table->string('pipa_lossing')->nullable();
+            $table->timestamp('tanggal');
             $table->timestamps();
         });
     }

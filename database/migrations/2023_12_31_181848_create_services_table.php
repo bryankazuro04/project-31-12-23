@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('wt_gross')->nullable();
             $table->string('postpone_time')->nullable();
             $table->string('approach_time')->nullable();
+            $table->timestamp('tanggal');
             $table->timestamps();
         });
     }
