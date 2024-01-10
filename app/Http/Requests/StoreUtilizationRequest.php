@@ -29,7 +29,7 @@ class StoreUtilizationRequest extends FormRequest
             'ytp' => 'nullable|numeric|decimal:2',
             'sor' => 'nullable|numeric|decimal:2',
             'stp' => 'nullable|numeric|decimal:2',
-            'created_at' => 'date'
+            'tanggal' => 'date'
         ];
     }
 

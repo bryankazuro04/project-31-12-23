@@ -28,7 +28,7 @@ class StoreServiceRequest extends FormRequest
             'wt_gross' => 'nullable|numeric|decimal:2',
             'postpone_time' => 'nullable|numeric|decimal:2',
             'approach_time' => 'nullable|numeric|decimal:2',
-            'created_at' => 'date'
+            'tanggal' => 'date'
         ];
     }
 

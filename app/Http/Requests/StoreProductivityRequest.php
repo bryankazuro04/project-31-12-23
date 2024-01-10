@@ -27,7 +27,8 @@ class StoreProductivityRequest extends FormRequest
             'bag_cargo' => "nullable|numeric|decimal:2",
             'unitized' => 'nullable|numeric|decimal:2',
             'truck_lossing' => 'nullable|numeric|decimal:2',
-            'pipa_lossing' => 'nullable|numeric|decimal:2'
+            'pipa_lossing' => 'nullable|numeric|decimal:2',
+            'tanggal' => 'date'
         ];
     }
 

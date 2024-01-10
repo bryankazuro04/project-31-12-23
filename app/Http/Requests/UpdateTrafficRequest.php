@@ -27,7 +27,7 @@ class UpdateTrafficRequest extends FormRequest
             'jumlah_bongkar_muat' => 'nullable|numeric',
             'grt' => 'nullable|numeric',
             'loa' => 'nullable|numeric|decimal:2',
-            'created_at' => 'date'
+            'tanggal' => 'date'
         ];
     }
 
