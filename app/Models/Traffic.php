@@ -9,7 +9,7 @@ class Traffic extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['kunjungan_kapal', 'jumlah_bongkar_muat', 'grt', 'loa'];
+    protected $fillable = ['kunjungan_kapal', 'jumlah_bongkar_muat', 'grt', 'loa', 'tanggal'];
 
     public function operations() {
         return $this->hasMany(Operation::class, 'traffic_id', 'id');

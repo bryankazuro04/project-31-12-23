@@ -9,7 +9,7 @@ class Utilization extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['bor', 'btp', 'yor', 'ytp', 'sor', 'stp'];
+    protected $fillable = ['bor', 'btp', 'yor', 'ytp', 'sor', 'stp', 'tanggal'];
     
     public function operations() {
         return $this->hasMany(Operation::class, 'utilizations_id', 'id');
